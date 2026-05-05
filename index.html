@@ -149,7 +149,6 @@
             max-width: 100%; max-height: 70vh; display: block; object-fit: contain; outline: none; background: #000;
         }
 
-        /* --- CONTACT & FOOTER --- */
         .contact-bar { padding: 100px 20px; background: #050505; text-align: center; border-top: 1px solid #1a1a1a;}
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; letter-spacing: 4px; margin-bottom: 50px; text-transform: uppercase; color: #fff;}
         .social-icons-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 50px; }
@@ -218,8 +217,8 @@
             <span>GIA CARP</span>
         </a>
         <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#services">Dịch vụ</a>
+            <a href="#contact">Thông tin liên hệ</a>
             <a href="https://zalo.me/0389311563" class="nav-btn-booking" target="_blank">Booking Now</a>
         </div>
     </nav>
@@ -443,29 +442,19 @@
         typeTabTitle();
         
     
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        
         document.onkeydown = function(e) {
-            
             if (e.keyCode === 123) {
                 return false;
             }
-            
             if (e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) {
                 return false;
             }
-            
             if (e.ctrlKey && e.shiftKey && e.keyCode === 'J'.charCodeAt(0)) {
                 return false;
             }
-            
             if (e.ctrlKey && e.shiftKey && e.keyCode === 'C'.charCodeAt(0)) {
                 return false;
             }
-            
             if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
                 return false;
             }
