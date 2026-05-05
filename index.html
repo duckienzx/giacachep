@@ -381,7 +381,7 @@
 
     
     <script>
-        // Modal & Pricing toggles
+        
         function openMoMo() { document.getElementById('momoModal').style.display = 'flex'; }
         function closeMoMo(event) { document.getElementById('momoModal').style.display = 'none'; }
         
@@ -418,32 +418,58 @@
                 charIndex++;
             }
             
-            let typingSpeed = 200; // Tốc độ gõ bình thường
+            let typingSpeed = 200; 
             
             if (isDeleting) {
-                typingSpeed = 50; // Xóa thật nhanh
+                typingSpeed = 50; 
             }
             
             if (!isDeleting && charIndex === currentPhrase.length + 1) {
-                // Đã gõ xong câu -> Dừng 2 giây trước khi xóa
+                
                 typingSpeed = 2000; 
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
-                // Đã xóa xong -> Chuyển sang câu tiếp theo
+                
                 isDeleting = false;
                 phraseIndex++;
                 if (phraseIndex >= phrases.length) {
-                    phraseIndex = 0; // Quay lại câu đầu tiên tạo vòng lặp
+                    phraseIndex = 0; 
                 }
-                typingSpeed = 500; // Dừng một chút trước khi gõ câu mới
+                typingSpeed = 500; 
             }
             
             setTimeout(typeTabTitle, typingSpeed);
         }
-        
-        // Bắt đầu chạy hiệu ứng
         typeTabTitle();
-    </script>
+        
+    
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
 
+        
+        document.onkeydown = function(e) {
+            
+            if (e.keyCode === 123) {
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) {
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 'J'.charCodeAt(0)) {
+                return false;
+            }
+            
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 'C'.charCodeAt(0)) {
+                return false;
+            }
+            
+            if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
+        </script>
 </body>
 </html>
