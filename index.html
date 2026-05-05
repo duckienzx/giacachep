@@ -151,7 +151,7 @@
 
         .contact-bar { padding: 100px 20px; background: #050505; text-align: center; border-top: 1px solid #1a1a1a;}
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; letter-spacing: 4px; margin-bottom: 50px; text-transform: uppercase; color: #fff;}
-        .social-icons-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 50px; }
+        .social-icons-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 30px; }
         .social-icon-link {
             font-size: 1.7rem; text-decoration: none; width: 65px; height: 65px; display: flex; align-items: center; justify-content: center;
             background: #121212; border-radius: 50%; transition: 0.4s; color: #fff;
@@ -316,7 +316,7 @@
 
     
     <section class="demo-section">
-        <h2 class="section-title">VIDEO TRẢI NGHIỆM BOOKING SỰ KIỆN</h2>
+        <h2 class="section-title">VIDEO TRẢI NGHIỆM</h2>
         <div class="video-grid">
             <div class="video-wrapper">
                 <video controls preload="metadata">
@@ -337,6 +337,10 @@
             <a href="https://www.tiktok.com/@giacachep" target="_blank" class="social-icon-link tiktok"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@GiaCarp" target="_blank" class="social-icon-link youtube"><i class="fa-brands fa-youtube"></i></a>
         </div>
+
+        <p style="color: #fff; font-weight: 500; margin-bottom: 40px; letter-spacing: 1px; opacity: 0.8;">
+            Liên hệ công việc Email: <a href="mailto:djgiacarp@gmail.com" style="color: var(--gold); text-decoration: none;">djgiacarp@gmail.com</a>
+        </p>
 
         <div class="contact-methods">
             <a href="https://zalo.me/0389311563" class="contact-item btn-zalo" target="_blank">
@@ -400,7 +404,7 @@
         }
 
         
-        const phrases = ["DJ GIA CARP | Kiều Hoàng Gia", "Welcome to my service.","Thank you so much!"];
+        const phrases = ["DJ GIA CARP | Kiều Hoàng Gia", "Chào mừng bạn "];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -408,7 +412,6 @@
         function typeTabTitle() {
             let currentPhrase = phrases[phraseIndex];
             
-            // Xử lý logic gõ và xóa
             if (isDeleting) {
                 document.title = currentPhrase.substring(0, charIndex) + " |";
                 charIndex--;
