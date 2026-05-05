@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ GIA CARP | Kiều Hoàng Gia - Premium Music Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --black: #050505;
+            --dark-gray: #1a1a1a;
+            --light-gray: #f4f4f6;
+            --white: #ffffff;
+            --rb-blue: #0066ff;
+            --fb-color: #1877f2;
+            --ig-color: #e1306c;
+            --tt-color: #ff0050;
+            --yt-color: #ff0000;
+            --momo-color: #a50064; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: var(--black); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* --- THANH NAVBAR --- */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+            display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+        }
+        .nav-brand {
+            display: flex; align-items: center; gap: 15px; 
+            color: var(--black); text-decoration: none;
+            font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 2px; font-weight: 800;
+        }
+        .nav-logo-small { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1px solid #ddd; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: var(--black); text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--rb-blue); }
+        .nav-btn-booking { background: var(--rb-blue); color: var(--white) !important; padding: 10px 24px; border-radius: 50px; transition: 0.3s; }
+        .nav-btn-booking:hover { background: #0052cc; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3); }
+
+        @media (max-width: 768px) { .navbar { padding: 15px 20px; } .nav-links a:not(.nav-btn-booking) { display: none; } }
+
+        /* --- PHẦN HERO --- */
+        .hero {
+            min-height: 100vh; padding: 120px 20px 60px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?auto=format&fit=crop&q=80') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 5.5rem); letter-spacing: 8px; margin-bottom: 5px; margin-top: 20px; }
+        .hero-slogan { font-size: 1.2rem; font-weight: 300; letter-spacing: 5px; color: var(--white); margin-bottom: 30px; }
+        
+        .hero-intro {
+            background: rgba(20, 20, 20, 0.75); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15); padding: 40px 50px; border-radius: 16px;
+            max-width: 800px; width: 100%; text-align: left; box-shadow: 0 20px 40px rgba(0,0,0,0.6); margin-top: 20px; 
+        }
+
+        .hero-intro h3 {
+            color: var(--gold); font-size: 1.5rem; margin-bottom: 25px; letter-spacing: 2px;
+            text-transform: uppercase; text-align: center; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 15px;
+        }
+        
+        .hero-intro ul { list-style: none; padding: 0; margin: 0; }
+        .hero-intro li {
+            font-size: 1.05rem; color: #f0f0f0; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 18px;
+            line-height: 1.7; letter-spacing: 0.5px; font-weight: 400;
+        }
+        .hero-intro li:last-child { margin-bottom: 0; }
+        .hero-intro li i { color: var(--rb-blue); font-size: 1.3rem; margin-top: 5px; }
+        .hero-intro li strong { color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-right: 5px; }
+
+        @media (max-width: 768px) {
+            .hero-intro { padding: 30px 20px; }
+            .hero-intro h3 { font-size: 1.2rem; }
+            .hero-intro li { font-size: 0.95rem; }
+        }
+
+        /* --- KHỐI NỘI DUNG --- */
+        .rb-section { padding: 120px 5%; display: flex; justify-content: center; }
+        .rb-light { background-color: var(--light-gray); color: #111; }
+        .rb-dark { background-color: var(--dark-gray); color: #fff; }
+        .rb-container { max-width: 1200px; width: 100%; display: flex; align-items: center; gap: 80px; }
+        .rb-container.reverse { flex-direction: row-reverse; }
+        .rb-content { flex: 1; }
+        .rb-title { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px; }
+        .rb-desc { font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px; font-weight: 400; opacity: 0.8; }
+        
+        .rb-price-list { list-style: none; margin-bottom: 40px; }
+        .rb-price-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid rgba(0,0,0,0.1); font-size: 1.05rem; font-weight: 500; }
+        .rb-dark .rb-price-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .rb-price-val { font-weight: 800; color: #111; }
+        .rb-dark .rb-price-val { color: var(--gold); } 
+
+        /* DROPDOWN MENU BẢNG GIÁ */
+        .accordion-toggle { cursor: pointer; transition: 0.3s; }
+        .accordion-toggle:hover { color: var(--rb-blue); }
+        .icon-rotate { transform: rotate(180deg); }
+        
+        .rb-sub-price-list { 
+            list-style: none; padding-left: 20px; border-left: 2px solid rgba(0,0,0,0.1); 
+            margin-bottom: 10px; display: none; 
+        }
+        .rb-dark .rb-sub-price-list { border-left-color: rgba(255,255,255,0.1); }
+        .rb-sub-price-item { display: flex; justify-content: space-between; padding: 12px 0; font-size: 0.95rem; color: #555; border-bottom: 1px dashed rgba(0,0,0,0.05); }
+        .rb-dark .rb-sub-price-item { color: #ccc; border-bottom-color: rgba(255,255,255,0.05); }
+        .rb-sub-price-item:last-child { border-bottom: none; }
+
+        .rb-btn {
+            display: inline-flex; align-items: center; gap: 10px; background: var(--rb-blue); color: #fff; padding: 14px 32px;
+            border-radius: 50px; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: 0.3s;
+        }
+        .rb-btn:hover { background: #0052cc; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3); }
+        .rb-image { flex: 1; text-align: center; }
+        .rb-image img { width: 100%; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.2); object-fit: cover; }
+        .rb-dark .rb-image img { box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+
+        @media (max-width: 950px) {
+            .rb-container, .rb-container.reverse { flex-direction: column; gap: 40px; }
+            .rb-section { padding: 80px 5%; }
+            .rb-price-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .rb-price-val { background: rgba(0,0,0,0.05); padding: 5px 10px; border-radius: 4px; display: inline-block; width: fit-content;}
+            .rb-dark .rb-price-val { background: rgba(255,255,255,0.05); }
+        }
+
+        /* --- VIDEO DEMO SECTION TỐI ƯU MP4/MOV --- */
+        .demo-section { background-color: #0a0a0a; padding: 100px 5%; border-top: 1px solid #1a1a1a; text-align: center; }
+        .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; align-items: center; justify-items: center; }
+        
+        .video-wrapper { 
+            background: #000; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 2px solid #333; 
+            border-radius: 16px; /* ĐÃ SỬA LẠI THÀNH BO GÓC TRÒN CHUẨN */
+            display: inline-flex; 
+            overflow: hidden; 
+            max-width: 100%;
+        }
+        
+        .video-wrapper video { 
+            max-width: 100%; max-height: 70vh; display: block; object-fit: contain; outline: none; background: #000;
+        }
+        @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+        /* --- CONTACT & FOOTER --- */
+        .contact-bar { padding: 100px 20px; background: #050505; text-align: center; border-top: 1px solid #1a1a1a;}
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; letter-spacing: 4px; margin-bottom: 50px; text-transform: uppercase; color: #fff;}
+        .social-icons-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 50px; }
+        .social-icon-link {
+            font-size: 1.7rem; text-decoration: none; width: 65px; height: 65px; display: flex; align-items: center; justify-content: center;
+            background: #121212; border-radius: 50%; transition: 0.4s; color: #fff;
+        }
+        .social-icon-link.facebook:hover { background: var(--fb-color); transform: scale(1.1); box-shadow: 0 10px 20px rgba(24, 119, 242, 0.5);}
+        .social-icon-link.instagram:hover { background: var(--ig-color); transform: scale(1.1); box-shadow: 0 10px 20px rgba(225, 48, 108, 0.5);}
+        .social-icon-link.tiktok:hover { background: var(--tt-color); transform: scale(1.1); box-shadow: 0 10px 20px rgba(255, 0, 80, 0.5);}
+        .social-icon-link.youtube:hover { background: var(--yt-color); transform: scale(1.1); box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);}
+
+        .contact-methods { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto; }
+        .contact-item {
+            display: flex; align-items: center; background: #111; padding: 18px 35px; border-radius: 60px;
+            text-decoration: none; color: var(--white); font-weight: 600; border: 1px solid #222; transition: 0.3s; cursor: pointer;
+        }
+        .contact-item img.custom-logo { width: 30px; height: 30px; margin-right: 15px; border-radius: 6px; object-fit: contain;}
+        
+        .btn-zalo:hover { border-color: var(--rb-blue); background: #000; transform: translateY(-3px); }
+        .btn-mb:hover { border-color: var(--gold); background: #000; transform: translateY(-3px); }
+        .btn-momo:hover { border-color: var(--momo-color); background: #000; transform: translateY(-3px); }
+
+        @media (max-width: 600px) {
+            .contact-methods { flex-direction: column; align-items: stretch; padding: 0 20px; }
+            .contact-item { width: 100%; justify-content: center; }
+        }
+
+        footer { background: var(--black); padding: 40px 20px; text-align: center; border-top: 1px solid #111; }
+        .copyright { font-size: 0.8rem; color: #666; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* --- POPUP MODAL QR CODE --- */
+        .modal-overlay {
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px);
+            align-items: center; justify-content: center;
+        }
+        .modal-content {
+            position: relative; background: #111; padding: 30px 20px; border-radius: 16px;
+            max-width: 90%; width: 400px; text-align: center;
+            animation: modalFadeIn 0.3s ease-out; 
+        }
+        .momo-modal { border: 2px solid var(--momo-color); box-shadow: 0 10px 30px rgba(165, 0, 100, 0.3); }
+        .momo-modal .close-btn { background: var(--momo-color); color: white; }
+        .momo-modal .close-btn:hover { background: #ff0050; }
+        .mb-modal { border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); }
+        .mb-modal .close-btn { background: var(--gold); color: #000; }
+        .mb-modal .close-btn:hover { background: #fff; }
+
+        .modal-content h3 { margin-bottom: 20px; font-family: 'Inter', sans-serif; font-size: 1.2rem; }
+        .close-btn {
+            position: absolute; top: -15px; right: -15px; 
+            width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; cursor: pointer; border: 3px solid #111; transition: 0.3s;
+        }
+        @keyframes modalFadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-brand">
+            <img src="gia.jpg" alt="GC" class="nav-logo-small" onerror="this.src='https://via.placeholder.com/35'">
+            <span>GIA CARP</span>
+        </a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="https://zalo.me/0389311563" class="nav-btn-booking" target="_blank">Booking Now</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>DJ GIA CARP</h1>
+        <h2 class="hero-slogan">KIỀU HOÀNG GIA</h2>
+        
+        <div class="hero-intro">
+            <h3>Khóa Đào Tạo DJ Chuyên Sâu - Thực Chiến</h3>
+            <ul>
+                <li><i class="fa-solid fa-headphones-simple"></i> Khóa học Advance DJ dành cho những học viên muốn chinh phục và tỏa sáng tại môi trường chuyên nghiệp, các sân khấu lớn, FESTIVAL.</li>
+                <li><i class="fa-solid fa-sliders"></i> Thực hành trực tiếp trên các thiết bị phổ biến và SYSTEM NEXUS 2 (Pioneer DJ).</li>
+                <li><i class="fa-solid fa-compact-disc"></i> <strong>CUNG CẤP NHẠC ĐỘC QUYỀN:</strong> Sản xuất Nonstop, Mixset chuyên nghiệp, độc quyền theo yêu cầu.</li>
+                <li><i class="fa-solid fa-microphone-lines"></i> Nhận đào tạo DJ và Booking show sự kiện quanh khu vực Sơn Dương, Tuyên Quang và các tỉnh lân cận.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="services">
+        <section class="rb-section rb-light">
+            <div class="rb-container">
+                <div class="rb-content">
+                    <h2 class="rb-title">Đào tạo <br>setup cấp tốc</h2>
+                    <p class="rb-desc">Nâng tầm kỹ năng biểu diễn với các khóa học bài bản và tối ưu hóa hệ thống phần mềm làm nhạc của bạn đạt hiệu suất cao nhất.</p>
+                    
+                    <ul class="rb-price-list">
+                        <li class="rb-price-item accordion-toggle" onclick="togglePricing()">
+                            <span>Khoá đào tạo DJ <i id="arrow-icon" class="fa-solid fa-chevron-down" style="margin-left: 8px; font-size: 0.9em; transition: 0.3s;"></i></span>
+                            <span class="rb-price-val">Xem giá chi tiết</span>
+                        </li>
+                        
+                        <ul id="dropdown-pricing" class="rb-sub-price-list">
+                            <li class="rb-sub-price-item">
+                                <span>- Khóa Cơ Bản</span>
+                                <span class="rb-price-val">4.000.000 VNĐ</span>
+                            </li>
+                            <li class="rb-sub-price-item">
+                                <span>- Khóa Cấp Tốc</span>
+                                <span class="rb-price-val">6.000.000 VNĐ</span>
+                            </li>
+                            <li class="rb-sub-price-item">
+                                <span>- Khóa từ cơ bản đến nâng cao</span>
+                                <span class="rb-price-val">11.999.999 VNĐ</span>
+                            </li>
+                        </ul>
+
+                        <li class="rb-price-item">
+                            <span>Sửa chữa và độ mâm bàn DJ</span>
+                            <span class="rb-price-val">Thương Lượng</span>
+                        </li>
+                    </ul>
+                    <a href="https://zalo.me/0389311563" class="rb-btn">Liên Hệ ngay <i class="fa-solid fa-chevron-right" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                </div>
+                <div class="rb-image"><img src="dume.jpg" alt="Training & Tech"></div>
+            </div>
+        </section>
+
+        <section class="rb-section rb-dark">
+            <div class="rb-container reverse">
+                <div class="rb-content">
+                    <h2 class="rb-title">Âm Nhạc<br> Độc Quyền</h2>
+                    <p class="rb-desc">Kho nhạc chất lượng cao, cập nhật liên tục. Trải nghiệm các bản Mixset, Nonstop được thiết kế riêng biệt để làm chủ mọi không gian.</p>
+                    
+                    <ul class="rb-price-list">
+                        <li class="rb-price-item"><span>Nhạc đặt theo yêu cầu riêng</span><span class="rb-price-val">Thương Lượng</span></li>
+                        <li class="rb-price-item"><span>Nonstop, Mixset yêu cầu cho dân bay ✈️</span><span class="rb-price-val">Thương lượng</span></li>
+                        <li class="rb-price-item"><span>USB nhạc DJ cho anh em</span><span class="rb-price-val">999.000 VNĐ - 1.499.000 VNĐ</span></li>
+                        <li class="rb-price-item"><span>Nhạc lựa theo Demo</span><span class="rb-price-val">Liên hệ</span></li>
+                    </ul>
+                    <a href="https://zalo.me/0389311563" class="rb-btn">Liên Hệ ngay <i class="fa-solid fa-chevron-right" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                </div>
+                <div class="rb-image"><img src="usb.jpg" alt="Music Production"></div>
+            </div>
+        </section>
+
+        <section class="rb-section rb-light">
+            <div class="rb-container">
+                <div class="rb-content">
+                    <h2 class="rb-title">Booking Sự Kiện<br>& Biểu Diễn</h2>
+                    <p class="rb-desc">Đốt cháy mọi sân khấu và sự kiện với đội ngũ DJ, MC Hype và Dancer Nam/Nữ chuyên nghiệp nhất khu vực Miền Bắc.</p>
+                    
+                    <ul class="rb-price-list">
+                        <li class="rb-price-item"><span>Show DJ - MC Hype - Dancer Nam/Nữ</span><span class="rb-price-val">Thương lượng</span></li>
+                    </ul>
+                    <a href="https://zalo.me/0389311563" class="rb-btn">Liên hệ <i class="fa-solid fa-chevron-right" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                </div>
+                <div class="rb-image"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80" alt="Event Booking"></div>
+            </div>
+        </section>
+    </div>
+
+    <section class="demo-section">
+        <h2 class="section-title">VIDEO TRẢI NGHIỆM</h2>
+        <div class="video-grid">
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video1.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video2.MOV" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-bar">
+        <h2 class="section-title">BOOKING & PAYMENTS</h2>
+        
+        <div class="social-icons-container">
+            <a href="https://www.facebook.com/djgiacarp" target="_blank" class="social-icon-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/djgiacarp" target="_blank" class="social-icon-link instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@giacachep" target="_blank" class="social-icon-link tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@GiaCarp" target="_blank" class="social-icon-link youtube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="contact-methods">
+            <a href="https://zalo.me/0389311563" class="contact-item btn-zalo" target="_blank">
+                <img src="zalo.webp" alt="Zalo" class="custom-logo" onerror="this.style.display='none'"> 
+                ZALO: 0389.311.563
+            </a>
+            
+            <div class="contact-item btn-mb" onclick="openMB()">
+                <img src="mb.webp" alt="MB" class="custom-logo" onerror="this.style.display='none'"> 
+                MB BANK
+            </div>
+            
+            <div class="contact-item btn-momo" onclick="openMoMo()">
+                <img src="momo.webp" alt="MoMo" class="custom-logo" onerror="this.style.display='none'"> 
+                MOMO QR CODE
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copyright">© 2026 GIA CARP ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <div id="momoModal" class="modal-overlay" onclick="closeMoMo(event)">
+        <div class="modal-content momo-modal" onclick="event.stopPropagation()">
+            <div class="close-btn" onclick="closeMoMo(event)"><i class="fa-solid fa-xmark"></i></div>
+            <h3 style="color: #fff;">QUÉT MÃ MOMO ĐỂ THANH TOÁN</h3>
+            <img src="mom.jpg" alt="MoMo QR Code" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div id="mbModal" class="modal-overlay" onclick="closeMB(event)">
+        <div class="modal-content mb-modal" onclick="event.stopPropagation()">
+            <div class="close-btn" onclick="closeMB(event)"><i class="fa-solid fa-xmark"></i></div>
+            <h3 style="color: var(--gold);">QUÉT MÃ MB BANK</h3>
+            <img src="mb.JPG" alt="MB Bank QR Code" style="width: 100%; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/400x500?text=Vui+l%C3%B2ng+up+%E1%BA%A3nh+mb-qr.jpg'">
+        </div>
+    </div>
+
+    <script>
+        function openMoMo() { document.getElementById('momoModal').style.display = 'flex'; }
+        function closeMoMo(event) { document.getElementById('momoModal').style.display = 'none'; }
+        
+        function openMB() { document.getElementById('mbModal').style.display = 'flex'; }
+        function closeMB(event) { document.getElementById('mbModal').style.display = 'none'; }
+
+        function togglePricing() {
+            var list = document.getElementById("dropdown-pricing");
+            var icon = document.getElementById("arrow-icon");
+            if (list.style.display === "block") {
+                list.style.display = "none";
+                icon.classList.remove("icon-rotate");
+            } else {
+                list.style.display = "block";
+                icon.classList.add("icon-rotate");
+            }
+        }
+    </script>
+
+</body>
+</html>
