@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="gia.png" type="image/png">
+    
     <title>DJ GIA CARP | Kiều Hoàng Gia</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -24,7 +28,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        /* --- THANH NAVBAR --- */
+        
         .navbar {
             position: fixed; top: 0; left: 0; width: 100%;
             background: rgba(255, 255, 255, 0.98); 
@@ -47,7 +51,7 @@
 
         @media (max-width: 768px) { .navbar { padding: 15px 20px; } .nav-links a:not(.nav-btn-booking) { display: none; } }
 
-        /* --- PHẦN HERO --- */
+        
         .hero {
             min-height: 100vh; padding: 120px 20px 60px;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?auto=format&fit=crop&q=80') center/cover;
@@ -132,23 +136,13 @@
         /* --- VIDEO DEMO SECTION TỐI ƯU MP4/MOV --- */
         .demo-section { background-color: #0a0a0a; padding: 100px 5%; border-top: 1px solid #1a1a1a; text-align: center; }
         
-        /* Chuyển grid thành flex để 1 video sẽ tự động ra chính giữa màn hình */
         .video-grid { 
-            display: flex; 
-            justify-content: center; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            align-items: center; 
+            display: flex; justify-content: center; max-width: 1200px; margin: 0 auto; align-items: center; 
         }
         
         .video-wrapper { 
-            background: #000; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            border: 2px solid #333; 
-            border-radius: 16px; 
-            display: inline-flex; 
-            overflow: hidden; 
-            max-width: 100%;
+            background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 2px solid #333; border-radius: 16px; display: inline-flex; overflow: hidden; max-width: 100%;
         }
         
         .video-wrapper video { 
@@ -187,7 +181,7 @@
         footer { background: var(--black); padding: 40px 20px; text-align: center; border-top: 1px solid #111; }
         .copyright { font-size: 0.8rem; color: #666; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* --- POPUP MODAL QR CODE --- */
+        
         .modal-overlay {
             display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px);
@@ -219,7 +213,8 @@
 
     <nav class="navbar">
         <a href="#" class="nav-brand">
-            <img src="gia.jpg" alt="GC" class="nav-logo-small" onerror="this.src='https://via.placeholder.com/35'">
+            <!-- ĐÃ SỬA THÀNH GIA.PNG -->
+            <img src="gia.png" alt="GC" class="nav-logo-small" onerror="this.src='https://via.placeholder.com/35'">
             <span>GIA CARP</span>
         </a>
         <div class="nav-links">
@@ -237,7 +232,7 @@
             <h3>Khóa Đào Tạo DJ Chuyên Sâu - Thực Chiến</h3>
             <ul>
                 <li><i class="fa-solid fa-headphones-simple"></i> Khóa học Advance DJ dành cho những học viên muốn chinh phục và tỏa sáng tại môi trường chuyên nghiệp, các sân khấu lớn, FESTIVAL.</li>
-                <li><i class="fa-solid fa-sliders"></i> Thực hành trực tiếp trên các thiết bị phổ biến.</li>
+                <li><i class="fa-solid fa-sliders"></i> Thực hành trực tiếp trên các thiết bị phổ biến và SYSTEM NEXUS 2 (Pioneer DJ).</li>
                 <li><i class="fa-solid fa-compact-disc"></i> <strong>CUNG CẤP NHẠC ĐỘC QUYỀN:</strong> Sản xuất Nonstop, Mixset chuyên nghiệp, độc quyền theo yêu cầu.</li>
                 <li><i class="fa-solid fa-microphone-lines"></i> Nhận đào tạo DJ và Booking show sự kiện quanh khu vực Sơn Dương, Tuyên Quang và các tỉnh lân cận.</li>
             </ul>
@@ -245,7 +240,7 @@
     </section>
 
     <div id="services">
-        <!-- ĐÀO TẠO & SETUP CẤP TỐC -->
+        
         <section class="rb-section rb-light">
             <div class="rb-container">
                 <div class="rb-content">
@@ -284,11 +279,11 @@
             </div>
         </section>
 
-        <!-- ÂM NHẠC ĐỘC QUYỀN -->
+        
         <section class="rb-section rb-dark">
             <div class="rb-container reverse">
                 <div class="rb-content">
-                    <h2 class="rb-title">Âm Nhạc<br> Độc Quyền</h2>
+                    <h2 class="rb-title">Nhạc<br> Độc Quyền</h2>
                     <p class="rb-desc">Kho nhạc chất lượng cao, cập nhật liên tục. Trải nghiệm các bản Mixset, Nonstop được thiết kế riêng biệt để làm chủ mọi không gian.</p>
                     
                     <ul class="rb-price-list">
@@ -303,7 +298,7 @@
             </div>
         </section>
 
-        <!-- BOOKING SỰ KIỆN -->
+        
         <section class="rb-section rb-light">
             <div class="rb-container">
                 <div class="rb-content">
@@ -320,7 +315,7 @@
         </section>
     </div>
 
-    <!-- KHU VỰC VIDEO TRẢI NGHIỆM -->
+    
     <section class="demo-section">
         <h2 class="section-title">VIDEO TRẢI NGHIỆM</h2>
         <div class="video-grid">
@@ -333,7 +328,7 @@
         </div>
     </section>
 
-    <!-- CONTACT VÀ THANH TOÁN -->
+    
     <section id="contact" class="contact-bar">
         <h2 class="section-title">BOOKING & PAYMENTS</h2>
         
@@ -366,7 +361,7 @@
         <p class="copyright">© 2026 GIA CARP ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- POPUP MODAL QR MOMO -->
+    
     <div id="momoModal" class="modal-overlay" onclick="closeMoMo(event)">
         <div class="modal-content momo-modal" onclick="event.stopPropagation()">
             <div class="close-btn" onclick="closeMoMo(event)"><i class="fa-solid fa-xmark"></i></div>
@@ -375,7 +370,7 @@
         </div>
     </div>
 
-    <!-- POPUP MODAL QR MB BANK -->
+    
     <div id="mbModal" class="modal-overlay" onclick="closeMB(event)">
         <div class="modal-content mb-modal" onclick="event.stopPropagation()">
             <div class="close-btn" onclick="closeMB(event)"><i class="fa-solid fa-xmark"></i></div>
@@ -384,8 +379,9 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
+    
     <script>
+        // Modal & Pricing toggles
         function openMoMo() { document.getElementById('momoModal').style.display = 'flex'; }
         function closeMoMo(event) { document.getElementById('momoModal').style.display = 'none'; }
         
@@ -403,6 +399,50 @@
                 icon.classList.add("icon-rotate");
             }
         }
+
+        
+        const phrases = ["DJ GIA CARP | Kiều Hoàng Gia", "Welcome to my service.","Thank you so much!"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeTabTitle() {
+            let currentPhrase = phrases[phraseIndex];
+            
+            // Xử lý logic gõ và xóa
+            if (isDeleting) {
+                document.title = currentPhrase.substring(0, charIndex) + " |";
+                charIndex--;
+            } else {
+                document.title = currentPhrase.substring(0, charIndex) + " |";
+                charIndex++;
+            }
+            
+            let typingSpeed = 200; // Tốc độ gõ bình thường
+            
+            if (isDeleting) {
+                typingSpeed = 50; // Xóa thật nhanh
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length + 1) {
+                // Đã gõ xong câu -> Dừng 2 giây trước khi xóa
+                typingSpeed = 2000; 
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                // Đã xóa xong -> Chuyển sang câu tiếp theo
+                isDeleting = false;
+                phraseIndex++;
+                if (phraseIndex >= phrases.length) {
+                    phraseIndex = 0; // Quay lại câu đầu tiên tạo vòng lặp
+                }
+                typingSpeed = 500; // Dừng một chút trước khi gõ câu mới
+            }
+            
+            setTimeout(typeTabTitle, typingSpeed);
+        }
+        
+        // Bắt đầu chạy hiệu ứng
+        typeTabTitle();
     </script>
 
 </body>
