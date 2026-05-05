@@ -131,13 +131,21 @@
 
         /* --- VIDEO DEMO SECTION TỐI ƯU MP4/MOV --- */
         .demo-section { background-color: #0a0a0a; padding: 100px 5%; border-top: 1px solid #1a1a1a; text-align: center; }
-        .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; align-items: center; justify-items: center; }
+        
+        /* Chuyển grid thành flex để 1 video sẽ tự động ra chính giữa màn hình */
+        .video-grid { 
+            display: flex; 
+            justify-content: center; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            align-items: center; 
+        }
         
         .video-wrapper { 
             background: #000; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
             border: 2px solid #333; 
-            border-radius: 16px; /* ĐÃ SỬA LẠI THÀNH BO GÓC TRÒN CHUẨN */
+            border-radius: 16px; 
             display: inline-flex; 
             overflow: hidden; 
             max-width: 100%;
@@ -146,7 +154,6 @@
         .video-wrapper video { 
             max-width: 100%; max-height: 70vh; display: block; object-fit: contain; outline: none; background: #000;
         }
-        @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; gap: 30px; } }
 
         /* --- CONTACT & FOOTER --- */
         .contact-bar { padding: 100px 20px; background: #050505; text-align: center; border-top: 1px solid #1a1a1a;}
@@ -230,7 +237,7 @@
             <h3>Khóa Đào Tạo DJ Chuyên Sâu - Thực Chiến</h3>
             <ul>
                 <li><i class="fa-solid fa-headphones-simple"></i> Khóa học Advance DJ dành cho những học viên muốn chinh phục và tỏa sáng tại môi trường chuyên nghiệp, các sân khấu lớn, FESTIVAL.</li>
-                <li><i class="fa-solid fa-sliders"></i> Thực hành trực tiếp trên các thiết bị phổ biến và SYSTEM NEXUS 2 (Pioneer DJ).</li>
+                <li><i class="fa-solid fa-sliders"></i> Thực hành trực tiếp trên các thiết bị phổ biến.</li>
                 <li><i class="fa-solid fa-compact-disc"></i> <strong>CUNG CẤP NHẠC ĐỘC QUYỀN:</strong> Sản xuất Nonstop, Mixset chuyên nghiệp, độc quyền theo yêu cầu.</li>
                 <li><i class="fa-solid fa-microphone-lines"></i> Nhận đào tạo DJ và Booking show sự kiện quanh khu vực Sơn Dương, Tuyên Quang và các tỉnh lân cận.</li>
             </ul>
@@ -238,6 +245,7 @@
     </section>
 
     <div id="services">
+        <!-- ĐÀO TẠO & SETUP CẤP TỐC -->
         <section class="rb-section rb-light">
             <div class="rb-container">
                 <div class="rb-content">
@@ -276,6 +284,7 @@
             </div>
         </section>
 
+        <!-- ÂM NHẠC ĐỘC QUYỀN -->
         <section class="rb-section rb-dark">
             <div class="rb-container reverse">
                 <div class="rb-content">
@@ -294,6 +303,7 @@
             </div>
         </section>
 
+        <!-- BOOKING SỰ KIỆN -->
         <section class="rb-section rb-light">
             <div class="rb-container">
                 <div class="rb-content">
@@ -310,6 +320,7 @@
         </section>
     </div>
 
+    <!-- KHU VỰC VIDEO TRẢI NGHIỆM -->
     <section class="demo-section">
         <h2 class="section-title">VIDEO TRẢI NGHIỆM</h2>
         <div class="video-grid">
@@ -319,15 +330,10 @@
                     Trình duyệt của bạn không hỗ trợ thẻ video.
                 </video>
             </div>
-            <div class="video-wrapper">
-                <video controls preload="metadata">
-                    <source src="video2.MOV" type="video/mp4">
-                    Trình duyệt của bạn không hỗ trợ thẻ video.
-                </video>
-            </div>
         </div>
     </section>
 
+    <!-- CONTACT VÀ THANH TOÁN -->
     <section id="contact" class="contact-bar">
         <h2 class="section-title">BOOKING & PAYMENTS</h2>
         
@@ -360,6 +366,7 @@
         <p class="copyright">© 2026 GIA CARP ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <!-- POPUP MODAL QR MOMO -->
     <div id="momoModal" class="modal-overlay" onclick="closeMoMo(event)">
         <div class="modal-content momo-modal" onclick="event.stopPropagation()">
             <div class="close-btn" onclick="closeMoMo(event)"><i class="fa-solid fa-xmark"></i></div>
@@ -368,6 +375,7 @@
         </div>
     </div>
 
+    <!-- POPUP MODAL QR MB BANK -->
     <div id="mbModal" class="modal-overlay" onclick="closeMB(event)">
         <div class="modal-content mb-modal" onclick="event.stopPropagation()">
             <div class="close-btn" onclick="closeMB(event)"><i class="fa-solid fa-xmark"></i></div>
@@ -376,6 +384,7 @@
         </div>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script>
         function openMoMo() { document.getElementById('momoModal').style.display = 'flex'; }
         function closeMoMo(event) { document.getElementById('momoModal').style.display = 'none'; }
